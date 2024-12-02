@@ -1,0 +1,2 @@
+echo "logs/*" >> .gitignore
+echo "configs/*.env" >> .gitignore
