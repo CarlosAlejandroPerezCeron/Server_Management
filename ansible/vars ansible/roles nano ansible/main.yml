@@ -1,0 +1,19 @@
+---
+- name: Configurar servidores web
+  hosts: webservers
+  become: true
+  tasks:
+    - name: Actualizar paquetes
+      apt:
+        update_cache: yes
+
+    - name: Instalar NGINX
+      apt:
+        name: nginx
+        state: present
+
+    - name: Iniciar y habilitar NGINX
+      service:
+        name: nginx
+        state: started
+        enabled: true
