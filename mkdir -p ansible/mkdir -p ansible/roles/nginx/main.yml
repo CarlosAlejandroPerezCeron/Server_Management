@@ -15,3 +15,6 @@
   service:
     name: nginx
     state: restarted
+
+
+    - import_tasks: validate.yml
