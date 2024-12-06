@@ -1,0 +1,16 @@
+---
+# Tareas del rol para gestionar usuarios
+- name: Crear usuarios
+  user:
+    name: "{{ item.name }}"
+    state: present
+    groups: "{{ item.groups }}"
+    shell: /bin/bash
+    password: "{{ item.password | password_hash('sha512') }}"
+  with_items:
+    - name: admin
+      groups: sudo
+      password: "{{ default_password }}"
+    - name: developer
+      groups: developers
+      password: "{{ default_password }}"
