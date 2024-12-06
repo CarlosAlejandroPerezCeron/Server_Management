@@ -1,0 +1,15 @@
+---
+# Tareas del rol para configurar firewall con UFW
+- name: Permitir SSH
+  ufw:
+    rule: allow
+    port: 22
+
+- name: Permitir HTTP
+  ufw:
+    rule: allow
+    port: 80
+
+- name: Habilitar UFW
+  ufw:
+    state: enabled
