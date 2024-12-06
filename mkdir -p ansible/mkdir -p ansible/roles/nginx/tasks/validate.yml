@@ -1,0 +1,6 @@
+---
+- name: Validar que NGINX está en ejecución
+  command: systemctl status nginx
+  register: nginx_status
+  failed_when: "'active (running)' not in nginx_status.stdout"
+  changed_when: false
