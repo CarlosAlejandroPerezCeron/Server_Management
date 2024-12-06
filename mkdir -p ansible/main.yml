@@ -1,0 +1,8 @@
+---
+- name: Configuración avanzada de servidores
+  hosts: all
+  become: true
+  roles:
+    - nginx
+    - users
+    - firewall
