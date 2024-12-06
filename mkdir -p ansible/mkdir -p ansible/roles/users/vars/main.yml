@@ -1,0 +1,3 @@
+---
+# Variables del rol users
+default_password: "securepassword"
