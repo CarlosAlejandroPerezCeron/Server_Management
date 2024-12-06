@@ -23,3 +23,17 @@ This repository contains Ansible playbooks and Terraform scripts to efficiently 
 2. Run the playbook:
  ```bash
  ansible-playbook -i ansible/hosts ansible/main.yml
+
+## Roles
+
+### nginx
+Configures the NGINX web server. Includes installation, custom configuration, and restart.
+
+### users
+Creates users with default password, groups, and shell settings.
+
+### firewall
+Manages firewall rules using UFW. Allows HTTP and SSH traffic by default.
+
+### Validation
+Each role includes validation tasks to ensure changes were applied correctly.
